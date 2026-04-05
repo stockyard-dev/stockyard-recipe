@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  recipe:
+    build: .
+    ports:
+      - "9805:9805"
+    volumes:
+      - recipe_data:/data
+    environment:
+      - PORT=9805
+volumes:
+  recipe_data:
